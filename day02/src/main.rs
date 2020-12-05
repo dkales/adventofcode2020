@@ -2,7 +2,7 @@ use std::path::PathBuf;
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
-#[structopt(name = "day01")]
+#[structopt(name = "day02")]
 struct Opt {
     /// Input file
     #[structopt(parse(from_os_str))]

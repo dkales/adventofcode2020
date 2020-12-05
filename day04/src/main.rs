@@ -2,7 +2,7 @@ use std::{collections::HashMap, path::PathBuf};
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
-#[structopt(name = "day01")]
+#[structopt(name = "day04")]
 struct Opt {
     /// Input file
     #[structopt(parse(from_os_str))]
