@@ -3,7 +3,7 @@ use std::{collections::HashSet, path::PathBuf};
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
-#[structopt(name = "day04")]
+#[structopt(name = "day06")]
 struct Opt {
     /// Input file
     #[structopt(parse(from_os_str))]
