@@ -26,14 +26,14 @@ fn part1(input: &str) {
         .filter(|&x| x != "x")
         .map(|x| x.parse::<u64>().expect("have valid input"));
     let timestamp_offset = buses.map(|x| (x - (timestamp % x), x));
-    let max_timestamp = timestamp_offset
+    let min_timestamp = timestamp_offset
         .min_by(|x, y| x.0.cmp(&y.0))
         .expect("have a minimum");
     println!(
         "have bus {} in {} minutes, solution = {}",
-        max_timestamp.1,
-        max_timestamp.0,
-        max_timestamp.0 * max_timestamp.1
+        min_timestamp.1,
+        min_timestamp.0,
+        min_timestamp.0 * min_timestamp.1
     );
 }
 
