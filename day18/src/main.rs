@@ -1,5 +1,5 @@
 #![feature(str_split_once)]
-use std::{collections::HashSet, path::PathBuf};
+use std::path::PathBuf;
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]
