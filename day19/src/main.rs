@@ -143,13 +143,9 @@ fn part2(input: &str) {
         })
         .collect();
 
-    //let forty_two = build_regex_string(&rules, 42);
-    //let eleven = build_regex_string(&rules, 31);
     rules.insert(8, Rule::OneOrMoreRule(42));
     rules.insert(11, Rule::HackRule(42, 31));
-    println!("{:?}", rules);
     let regex = String::from("^") + &build_regex_string(&rules, 0) + "$";
-    println!("{}", regex);
     let regex = Regex::new(&regex).expect("have valid regex");
     let num_good = inputs.lines().filter(|line| regex.is_match(line)).count();
     println!("Have {:?} matches", num_good);
