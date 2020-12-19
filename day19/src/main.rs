@@ -18,7 +18,7 @@ enum Rule {
     OneOrMoreRule(usize),
     HackRule(usize, usize),
 }
-const MAX_WORKAROUND_LEN: usize = 10;
+const MAX_WORKAROUND_LEN: usize = 5;
 
 fn build_regex_string(rules: &HashMap<usize, Rule>, idx: usize) -> String {
     match &rules[&idx] {
